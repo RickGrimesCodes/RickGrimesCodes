@@ -1,0 +1,54 @@
+Attribute VB_Name = "Module1"
+Sub Grader():
+
+    ' When the button is pressed, check the value of B2
+    
+    ' If B2 is greater than or equal to 90
+    If Range("B2").Value >= 90 Then
+    
+        ' put pass in C2
+        Range("C2").Value = "Pass"
+        
+        ' Set the letter grade (D2) to "A"
+        Range("D2").Value = "A"
+        
+        ' color C2 green
+        Range("C2").Interior.ColorIndex = 4
+        
+    ' If B2 is greater than or equal to 80 and less than 90
+    ElseIf Range("B2").Value >= 80 Then
+         ' put pass in C2
+        Range("C2").Value = "Pass"
+        
+        ' Set the letter grade (D2) to "B"
+        Range("D2").Value = "B"
+        
+        ' color C2 green
+        Range("C2").Interior.ColorIndex = 4
+    ' If B2 is greater than or equal to 70 and less than 80
+    ElseIf Range("B2").Value >= 70 Then
+         ' put warning in C2
+        Range("C2").Value = "Warning"
+        
+        ' Set the letter grade (D2) to "C"
+        Range("D2").Value = "C"
+        
+        ' color C2 yellow
+        Range("C2").Interior.ColorIndex = 6
+    End If
+        
+End Sub
+Sub Reset():
+
+    ' put the current row contents (B2, C2, D2) in Row 3
+    Range("B3").Value = Range("B2").Value
+    Range("C3").Value = Range("C2").Value
+    Range("D3").Value = Range("D2").Value
+    ' put the row header ('previous grade' in A3)
+    Range("A3").Value = "Previous Grade"
+    
+    ' Empty the contents from row 2 and reset the color
+    Range("B2:D2").Value = ""
+    Range("C2").Interior.ColorIndex = 0
+
+End Sub
