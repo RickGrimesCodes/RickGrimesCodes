@@ -24,4 +24,5 @@ with open (outputPath, "w") as csvFile:
 
     csvWriter.writerow(["Clyde", "Orange"]) # wirte a header
 
+
     

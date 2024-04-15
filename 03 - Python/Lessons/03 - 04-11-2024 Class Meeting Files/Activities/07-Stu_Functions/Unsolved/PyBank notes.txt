@@ -1,0 +1,51 @@
+Import os and csv modules
+
+load budget_data.csv file using os.join()
+
+Track the following:
+total months - initialize to 0
+total net profit / losses - initialize to 0
+list of changes between months of profit/losses - initialize to []
+list of the greatest increase initialize to [", 0]
+
+Read the csv file and convert
+    csv reader that separates data using ',' as a delimiter
+
+    skip the header using next()
+        index 0 - date / month 
+        index 1 - profit / loss
+
+    add 1 on to the months (and accumulator)
+    total months = total months + 1 -> use += 1 header
+    get the first row of data by calling next()
+    add on to the total net profit loss -> total net profit loss += first row[1]
+    initialize your previous data as first rowp[1]
+
+    loop through the rest of the csv reader (row)
+    IE for row in reader:
+        add 1 on to the months
+        total months = total months + 1 -> use += 1 header
+
+        track the net changes -> row{1} - previous
+        add the net change to the list of net changes -> .append(net change)
+        update previous to row[1]
+
+        use an if statement to check to see if the net change > greatest increase[1]:
+            if so:
+                greatest increase[0] = row[0]
+                greatest increase[1] = net change
+
+        use an if statement to check to see if the net change <>> greatest increase[1]:
+            if so:
+                greatest Decrease[0] = row[0]
+                greatest Decrease[1] = net change
+After processing the file, calculate the average net change
+net monthly average = sum(net change list) / len(net change list)
+
+Display the total months
+Display the total net profit / loss
+Display the net montly change use F"" to format to two decimal places
+display the month and amount of greates increase of net change
+display the month and amount of greates decrease of net change
+
+use .write to write the results to a file
