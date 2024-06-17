@@ -1,0 +1,16 @@
+# June 17, 2024 - Unit 12.3 Aggregation, Analysis, and Integration with MongoDB
+---
+
+## Overview
+This class will introduce the students to aggregation in MongoDB and integrate MongoDB with other Python libraries they have already used.
+---
+
+## Class Objectives
+By the end of this lesson, the students will be able to:
+- Use aggregation and aggregation pipelines with MongoDB to analyze a subset of a MongoDB collection.
+- Convert a MongoDB result to a Pandas DataFrame.
+- Import data from an API to save to MongoDB.
+- Use data from a Mongo database to plot charts with Matplotlib.
+---
+
+© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
